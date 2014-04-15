@@ -8,7 +8,8 @@ Super Spineboy can be [downloaded](http://esotericsoftware.com/files/demos/super
 
 ## Controls
 
-* Left click shoots toward the mouse position. `A` is left, `D` is right, `W` is jump.
+* Left click shoots toward the mouse position. Hold to keep shooting.
+* `A` is left, `D` is right, `W` is jump.
 * Alternatively, `left arrow` is left, `right arrow` is right, `space` is jump.
 * Press `alt + enter` or click `Fullscreen` in the menu to run the game fullscreen.
 * Press the number keys `1` through `6` to control the game speed, allowing you to see how smooth the animations are and the transitions between animations.
