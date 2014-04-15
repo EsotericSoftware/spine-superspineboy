@@ -33,6 +33,10 @@ Super Spineboy is written in Java and uses OpenGL, [libgdx](http://libgdx.badlog
 
 The Super Spineboy source can be downloaded from GitHub using a Git client or as a [zip file](https://github.com/EsotericSoftware/spine-superspineboy/archive/master.zip). To run from source using Eclipse, click `File` -> `Import` -> `Existing projects`.
 
+## License
+
+Super Spineboy is licensed under the [Spine Runtime License](https://github.com/EsotericSoftware/spine-superspineboy/blob/master/LICENSE). Please see the license for full details, but this basically means that if you license [Spine](http://esotericsoftware.com/), you can create derivative works or otherwise use Super Spineboy however you like.
+
 ## Screenshots
 
 ![](http://i.imgur.com/TQi1qXB.png)
