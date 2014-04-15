@@ -4,13 +4,16 @@ Super Spineboy is a platformer game for Windows, Mac and Linux written using [Sp
 
 ## Download
 
-Super Spineboy can be [downloaded](esotericsoftware.com/files/demos/superSpineboy.jar) in binary form and run on Windows, Mac or Linux. Java 1.6+ is required.
+Super Spineboy can be [downloaded](http://esotericsoftware.com/files/demos/superSpineboy.jar) in binary form and run on Windows, Mac or Linux. Java 1.6+ is required.
 
 ## Controls
 
-Left click shoots toward the mouse position. `A` is left, `D` is right, `W` is jump.
-
-Alternatively, `left arrow` is left, `right arrow` is right, `space` is jump.
+* Left click shoots toward the mouse position. `A` is left, `D` is right, `W` is jump.
+* Alternatively, `left arrow` is left, `right arrow` is right, `space` is jump.
+* Press `alt + enter` or click `Fullscreen` in the menu to run the game fullscreen.
+* Press the number keys `1` through `6` to control the game speed, allowing you to see how smooth the animations are and the transitions between animations.
+* Press `tilda` or `P` to pause.
+* Press `Z` to zoom in/out so you can see the animations more easily.
 
 ## Gameplay tips
 
@@ -21,6 +24,7 @@ You may find Super Spineboy difficult at first. The game is relatively short, so
 * You cannot shoot backward when running away, but you can jump while running away and shoot backward in the air.
 * Standing your ground and mowing down enemies is great, but there are quickly so many enemies that you get overrun. When this happens, goomba head stomp the enemies. This is key to winning!
 * Getting sandwiched between two groups of enemies is a sure way to die. Head stomp your way to one side so you aren't surrounded.
+* If the game runs poorly, try unchecking `Background` in the menu.
 
 ## Source
 
