@@ -3,6 +3,11 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="assets"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/spine-libgdx"/>
+	<classpathentry kind="lib" path="libs/gdx-backend-lwjgl-natives.jar"/>
+	<classpathentry kind="lib" path="libs/gdx-backend-lwjgl.jar"/>
+	<classpathentry kind="lib" path="libs/gdx-natives.jar"/>
+	<classpathentry kind="lib" path="libs/gdx-openal.jar"/>
+	<classpathentry kind="lib" path="libs/gdx.jar"/>
+	<classpathentry kind="lib" path="libs/spine-libgdx.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
