@@ -1,0 +1,8 @@
+{
+paddingX: 0,
+paddingY: 0,
+combineSubdirectories: true,
+wrapX: ClampToEdge,
+wrapY: ClampToEdge,
+grid: true
+}

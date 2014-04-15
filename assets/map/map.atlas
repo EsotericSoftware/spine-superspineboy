@@ -1,0 +1,423 @@
+
+map.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+decals/ceiling-lamp-wire-01
+  rotate: false
+  xy: 0, 66
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+decals/ceiling_lamp-01
+  rotate: false
+  xy: 514, 584
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+decals/collision
+  rotate: false
+  xy: 0, 0
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+decals/column-01
+  rotate: false
+  xy: 0, 650
+  size: 512, 320
+  orig: 512, 320
+  offset: 0, 0
+  index: -1
+decals/column-02
+  rotate: false
+  xy: 0, 196
+  size: 512, 64
+  orig: 512, 64
+  offset: 0, 0
+  index: -1
+decals/column-03
+  rotate: false
+  xy: 0, 392
+  size: 512, 256
+  orig: 512, 256
+  offset: 0, 0
+  index: -1
+decals/crate-01
+  rotate: false
+  xy: 514, 714
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+decals/crate-02
+  rotate: false
+  xy: 772, 842
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+decals/crate-3
+  rotate: false
+  xy: 130, 66
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+decals/fill
+  rotate: false
+  xy: 644, 648
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+decals/fusebox-01
+  rotate: false
+  xy: 514, 454
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+decals/metal-01
+  rotate: false
+  xy: 0, 262
+  size: 512, 128
+  orig: 512, 128
+  offset: 0, 0
+  index: -1
+
+map2.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+decals02/ceiling-01
+  rotate: false
+  xy: 0, 840
+  size: 512, 128
+  orig: 512, 128
+  offset: 0, 0
+  index: -1
+decals02/concrete-01
+  rotate: false
+  xy: 0, 710
+  size: 512, 128
+  orig: 512, 128
+  offset: 0, 0
+  index: -1
+decals02/edge-left-01
+  rotate: false
+  xy: 0, 0
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+decals02/ground-01
+  rotate: false
+  xy: 0, 580
+  size: 512, 128
+  orig: 512, 128
+  offset: 0, 0
+  index: -1
+decals02/wall-left-01
+  rotate: false
+  xy: 0, 66
+  size: 128, 512
+  orig: 128, 512
+  offset: 0, 0
+  index: -1
+decals02/wall-left_bottom-01
+  rotate: false
+  xy: 514, 840
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+decals02/wall-right-01
+  rotate: false
+  xy: 130, 66
+  size: 128, 512
+  orig: 128, 512
+  offset: 0, 0
+  index: -1
+decals02/wall-right_top-01
+  rotate: false
+  xy: 260, 450
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+
+map3.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+decals03/concrete-02
+  rotate: false
+  xy: 0, 390
+  size: 512, 128
+  orig: 512, 128
+  offset: 0, 0
+  index: -1
+decals03/concrete-03
+  rotate: false
+  xy: 0, 260
+  size: 512, 128
+  orig: 512, 128
+  offset: 0, 0
+  index: -1
+decals03/metal-02
+  rotate: false
+  xy: 0, 130
+  size: 512, 128
+  orig: 512, 128
+  offset: 0, 0
+  index: -1
+decals03/metal-03
+  rotate: false
+  xy: 0, 0
+  size: 512, 128
+  orig: 512, 128
+  offset: 0, 0
+  index: -1
+
+map4.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+lights/light-01
+  rotate: false
+  xy: 0, 0
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+lights/light-02
+  rotate: false
+  xy: 512, 0
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+
+map5.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+rock/rock-01
+  rotate: false
+  xy: 0, 0
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+rock/rock-02
+  rotate: false
+  xy: 512, 0
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+rock/rock-03
+  rotate: false
+  xy: 0, 512
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+rock/rock-04
+  rotate: false
+  xy: 512, 512
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+
+map6.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+tint01/tint-01
+  rotate: false
+  xy: 0, 0
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+tint01/tint-02
+  rotate: false
+  xy: 512, 0
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+tint01/tint-03
+  rotate: false
+  xy: 0, 512
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+tint01/tint-04
+  rotate: false
+  xy: 512, 512
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+
+map7.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+tint02/tint-01
+  rotate: false
+  xy: 0, 0
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+tint02/tint-02
+  rotate: false
+  xy: 512, 0
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+tint02/tint-03
+  rotate: false
+  xy: 0, 512
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+tint02/tint-04
+  rotate: false
+  xy: 512, 512
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+
+map8.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+tint03/tint-01
+  rotate: false
+  xy: 260, 64
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+tint03/tint-02
+  rotate: false
+  xy: 390, 194
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+tint03/tint-03
+  rotate: false
+  xy: 904, 388
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+tint03/tint-04
+  rotate: false
+  xy: 0, 260
+  size: 512, 192
+  orig: 512, 192
+  offset: 0, 0
+  index: -1
+tint03/tint-05
+  rotate: false
+  xy: 0, 130
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+tint03/tint-06
+  rotate: false
+  xy: 514, 324
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+tint03/tint-07
+  rotate: false
+  xy: 0, 0
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+tint03/tint-08
+  rotate: false
+  xy: 130, 130
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+tint03/tint-09
+  rotate: false
+  xy: 644, 324
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+tint03/tint-10
+  rotate: false
+  xy: 130, 0
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+tint03/tint-11
+  rotate: false
+  xy: 260, 130
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+tint03/tint-12
+  rotate: false
+  xy: 774, 324
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+
+map9.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+walls/wall-01
+  rotate: false
+  xy: 0, 0
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+walls/wall-02
+  rotate: false
+  xy: 512, 0
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+walls/wall-03
+  rotate: false
+  xy: 0, 512
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+walls/wall-04
+  rotate: false
+  xy: 512, 512
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
