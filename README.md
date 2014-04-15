@@ -1,6 +1,6 @@
 ![Super Spineboy](http://i.imgur.com/6jMhdeU.jpg)
 
-Super Spineboy is a desktop platformer game written using [Spine](http://esotericsoftware.com/) and [spine-libgdx](https://github.com/EsotericSoftware/spine-runtimes/tree/master/spine-libgdx). Spine is a 2D animation tool specifically for games and Super Spineboy shows some of the ways to make use of Spine skeletons and animations in an actual game.
+Super Spineboy is a platformer game for Windows, Mac and Linux written using [Spine](http://esotericsoftware.com/) and [spine-libgdx](https://github.com/EsotericSoftware/spine-runtimes/tree/master/spine-libgdx). Spine is a 2D animation tool specifically for games and Super Spineboy shows some of the ways to make use of Spine skeletons and animations in an actual game.
 
 ## Download
 
@@ -30,8 +30,8 @@ The Super Spineboy source can be downloaded from GitHub using a Git client or as
 
 ## Screenshots
 
-![](http://i.imgur.com/Y3uAOSj.png)
+![](http://i.imgur.com/TQi1qXB.png)
 
 ![](http://i.imgur.com/j3RwiU7.png)
 
-![](http://i.imgur.com/TQi1qXB.png)
+![](http://i.imgur.com/Y3uAOSj.png)
