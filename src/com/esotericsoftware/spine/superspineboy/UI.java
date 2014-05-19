@@ -91,6 +91,8 @@ class UI extends InputAdapter {
 	Table splashTable;
 	Image splashImage, splashTextImage;
 	ProgressBar healthBar;
+	TextButton fullscreenButton, restartButton, menuButton;
+	Table menu;
 
 	int windowWidth, windowHeight;
 	float inputTimer;
@@ -108,6 +110,14 @@ class UI extends InputAdapter {
 		stage = new Stage(new ScreenViewport());
 		loadSkin();
 
+		create();
+		layout();
+		events();
+
+		showSplash(view.assets.titleRegion, view.assets.startRegion);
+	}
+
+	private void create () {
 		speed200Button = speedButton(2f);
 		speed150Button = speedButton(1.5f);
 		speed100Button = speedButton(1);
@@ -129,20 +139,19 @@ class UI extends InputAdapter {
 		bgButton = button("Background", true);
 		bgButton.setChecked(true);
 
-		TextButton fullscreenButton = button("Fullscreen", true);
-		fullscreenButton.addListener(new ChangeListener() {
-			public void changed (ChangeEvent event, Actor actor) {
-				toggleFullscreen();
-			}
-		});
+		fullscreenButton = button("Fullscreen", true);
 
-		TextButton restartButton = button("Restart", false);
-		restartButton.addListener(new ChangeListener() {
-			public void changed (ChangeEvent event, Actor actor) {
-				model.controller.restart();
-			}
-		});
+		menuButton = button("Menu", true);
+		menuButton.getColor().a = 0.3f;
 
+		splashImage = new Image();
+		splashImage.setScaling(Scaling.fit);
+
+		splashTextImage = new Image();
+		splashTextImage.addAction(forever(sequence(fadeOut(0.4f, pow2In), fadeIn(0.4f, pow2Out))));
+	}
+
+	private void layout () {
 		Table buttons = new Table();
 		buttons.defaults().uniformX().fillX();
 		buttons.add(speed200Button).row();
@@ -159,7 +168,7 @@ class UI extends InputAdapter {
 		buttons.add(fullscreenButton).row();
 		buttons.add(restartButton).row();
 
-		final Table menu = new Table(skin);
+		menu = new Table(skin);
 		menu.defaults().space(5);
 		menu.add("FPS:");
 		menu.add(fpsLabel).expandX().left().row();
@@ -168,8 +177,22 @@ class UI extends InputAdapter {
 		menu.add(buttons).colspan(2).left();
 		menu.setVisible(false);
 
-		final TextButton menuButton = button("Menu", true);
-		menuButton.getColor().a = 0.3f;
+		Table root = new Table(skin).debug();
+		stage.addActor(root);
+		root.top().left().pad(5).defaults().space(5);
+		root.setFillParent(true);
+		root.add(menuButton).fillX();
+		root.add(healthBar).height(10).fillY().expandX().right().top().row();
+		root.add(menu);
+
+		splashTable = new Table(skin);
+		splashTable.setFillParent(true);
+		splashTable.add(splashImage).fillX().row();
+		splashTable.add(splashTextImage);
+		splashTable.setTouchable(Touchable.enabled);
+	}
+
+	private void events () {
 		menuButton.addListener(new ChangeListener() {
 			public void changed (ChangeEvent event, Actor actor) {
 				menu.clearActions();
@@ -182,25 +205,18 @@ class UI extends InputAdapter {
 			}
 		});
 
-		Table root = new Table(skin).debug();
-		stage.addActor(root);
-		root.top().left().pad(5).defaults().space(5);
-		root.setFillParent(true);
-		root.add(menuButton).fillX();
-		root.add(healthBar).height(10).fillY().expandX().right().top().row();
-		root.add(menu);
+		fullscreenButton.addListener(new ChangeListener() {
+			public void changed (ChangeEvent event, Actor actor) {
+				toggleFullscreen();
+			}
+		});
 
-		splashImage = new Image();
-		splashImage.setScaling(Scaling.fit);
-
-		splashTextImage = new Image();
-		splashTextImage.addAction(forever(sequence(fadeOut(0.4f, pow2In), fadeIn(0.4f, pow2Out))));
-
-		splashTable = new Table(skin);
-		splashTable.setFillParent(true);
-		splashTable.add(splashImage).fillX().row();
-		splashTable.add(splashTextImage);
-		splashTable.setTouchable(Touchable.enabled);
+		restartButton = button("Restart", false);
+		restartButton.addListener(new ChangeListener() {
+			public void changed (ChangeEvent event, Actor actor) {
+				model.controller.restart();
+			}
+		});
 
 		splashTable.addListener(new InputListener() {
 			public boolean touchDown (InputEvent event, float x, float y, int pointer, int button) {
@@ -215,8 +231,6 @@ class UI extends InputAdapter {
 				return false;
 			}
 		});
-
-		showSplash(view.assets.titleRegion, view.assets.startRegion);
 	}
 
 	void loadSkin () {
