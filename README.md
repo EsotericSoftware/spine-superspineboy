@@ -4,7 +4,7 @@ Super Spineboy is a platformer game for Windows, Mac and Linux written using [Sp
 
 ## Download
 
-Super Spineboy can be [downloaded](http://esotericsoftware.com/files/demos/superSpineboy.jar) in binary form and run on Windows, Mac or Linux. Java 1.6+ is required.
+Super Spineboy can be [downloaded](http://esotericsoftware.com/files/runtimes/superSpineboy.jar) in binary form and run on Windows, Mac or Linux. Java 1.6+ is required.
 
 ## Controls
 
