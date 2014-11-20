@@ -204,7 +204,7 @@ class View extends InputAdapter {
 	}
 
 	void render () {
-		viewport.update();
+		viewport.apply();
 
 		Gdx.gl.glClearColor(0, 0, 0, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
@@ -224,7 +224,7 @@ class View extends InputAdapter {
 			skeletonRenderer.draw(batch, enemy.view.skeleton);
 		}
 		// Draw player.
-		if (player.collisionTimer < 0 || (int)(player.collisionTimer / flashTime) % 2 == 0)
+		if (player.collisionTimer < 0 || (int)(player.collisionTimer / flashTime) % 3 != 0)
 			skeletonRenderer.draw(batch, player.view.skeleton);
 		batch.end();
 

@@ -33,6 +33,10 @@ package com.esotericsoftware.spine.superspineboy;
 import static com.esotericsoftware.spine.superspineboy.Model.*;
 import static com.esotericsoftware.spine.superspineboy.Player.*;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.math.Interpolation;
+import com.badlogic.gdx.math.MathUtils;
+import com.badlogic.gdx.math.Vector2;
 import com.esotericsoftware.spine.Animation;
 import com.esotericsoftware.spine.AnimationState;
 import com.esotericsoftware.spine.AnimationState.AnimationStateAdapter;
@@ -42,11 +46,6 @@ import com.esotericsoftware.spine.EventData;
 import com.esotericsoftware.spine.Skeleton;
 import com.esotericsoftware.spine.superspineboy.Assets.SoundEffect;
 import com.esotericsoftware.spine.superspineboy.Model.State;
-
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.math.Interpolation;
-import com.badlogic.gdx.math.MathUtils;
-import com.badlogic.gdx.math.Vector2;
 
 /** The view class for the player. */
 class PlayerView extends CharacterView {

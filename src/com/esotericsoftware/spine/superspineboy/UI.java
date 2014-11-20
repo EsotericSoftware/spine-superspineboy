@@ -87,7 +87,7 @@ class UI extends InputAdapter {
 	Skin skin;
 	Label fpsLabel, bindsLabel;
 	TextButton debugButton, zoomButton, bgButton;
-	TextButton speed200Button, speed150Button, speed100Button, speed33Button, speed15Button, speed1Button, pauseButton;
+	TextButton speed200Button, speed150Button, speed100Button, speed33Button, speed15Button, speed3Button, pauseButton;
 	Table splashTable;
 	Image splashImage, splashTextImage;
 	ProgressBar healthBar;
@@ -123,10 +123,10 @@ class UI extends InputAdapter {
 		speed100Button = speedButton(1);
 		speed33Button = speedButton(0.33f);
 		speed15Button = speedButton(0.15f);
-		speed1Button = speedButton(0.01f);
+		speed3Button = speedButton(0.03f);
 		pauseButton = speedButton(0);
 		pauseButton.setText("Pause");
-		new ButtonGroup(speed200Button, speed150Button, speed100Button, speed33Button, speed15Button, speed1Button, pauseButton);
+		new ButtonGroup(speed200Button, speed150Button, speed100Button, speed33Button, speed15Button, speed3Button, pauseButton);
 		speed100Button.setChecked(true);
 
 		healthBar = new ProgressBar(0, Player.hpStart, 1, false, skin);
@@ -159,7 +159,7 @@ class UI extends InputAdapter {
 		buttons.add(speed100Button).row();
 		buttons.add(speed33Button).row();
 		buttons.add(speed15Button).row();
-		buttons.add(speed1Button).row();
+		buttons.add(speed3Button).row();
 		buttons.add(pauseButton).row();
 		buttons.defaults().padTop(5);
 		buttons.add(debugButton).row();
@@ -177,7 +177,7 @@ class UI extends InputAdapter {
 		menu.add(buttons).colspan(2).left();
 		menu.setVisible(false);
 
-		Table root = new Table(skin).debug();
+		Table root = new Table(skin);
 		stage.addActor(root);
 		root.top().left().pad(5).defaults().space(5);
 		root.setFillParent(true);
@@ -360,7 +360,7 @@ class UI extends InputAdapter {
 		}
 
 		stage.act();
-		stage.getViewport().update();
+		stage.getViewport().apply(true);
 		stage.draw();
 	}
 
@@ -407,7 +407,7 @@ class UI extends InputAdapter {
 			speed15Button.toggle();
 			return true;
 		case Keys.NUM_1:
-			speed1Button.toggle();
+			speed3Button.toggle();
 			return true;
 		case Keys.P:
 		case Keys.GRAVE:
