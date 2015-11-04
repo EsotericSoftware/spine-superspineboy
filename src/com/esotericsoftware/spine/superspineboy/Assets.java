@@ -50,7 +50,7 @@ import com.badlogic.gdx.utils.ObjectMap;
 /** Centralized place to load and store assets. */
 class Assets {
 	TextureAtlas playerAtlas, enemyAtlas;
-	TextureRegion bulletRegion, hitRegion;
+	TextureRegion bulletRegion, hitRegion, crosshair;
 	TextureRegion titleRegion, gameOverRegion, youLoseRegion, youWinRegion, startRegion;
 
 	SkeletonData playerSkeletonData, enemySkeletonData;
@@ -65,6 +65,7 @@ class Assets {
 		youLoseRegion = loadRegion("youLose.png");
 		youWinRegion = loadRegion("youWin.png");
 		startRegion = loadRegion("start.png");
+		crosshair = loadRegion("crosshair.png");
 
 		SoundEffect.shoot.sound = Gdx.audio.newSound(Gdx.files.internal("sounds/shoot.ogg"));
 		SoundEffect.hit.sound = Gdx.audio.newSound(Gdx.files.internal("sounds/hit.ogg"));

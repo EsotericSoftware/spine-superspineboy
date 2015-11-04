@@ -43,7 +43,7 @@ class Player extends Character {
 
 	static float shootDelay = 0.1f, shootOffsetX = 160, shootOffsetY = 11;
 	static float bulletSpeed = 34, bulletInheritVelocity = 0.4f, burstDuration = 0.18f;
-	static float kickbackShots = 33, kickbackAngle = 30, kickbackVarianceShots = 11, kickbackVariance = 22, kickback = 1.6f;
+	static float kickbackShots = 33, kickbackAngle = 30, kickbackVarianceShots = 11, kickbackVariance = 6, kickback = 1.6f;
 
 	static float knockbackX = 14, knockbackY = 5, collisionDelay = 2.5f, flashTime = 0.07f;
 	static float headBounceX = 12, headBounceY = 20;

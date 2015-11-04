@@ -30,13 +30,10 @@
 
 package com.esotericsoftware.spine.superspineboy;
 
-import static com.esotericsoftware.spine.superspineboy.Model.*;
-import static com.esotericsoftware.spine.superspineboy.View.*;
-
-import com.esotericsoftware.spine.SkeletonRendererDebug;
-
 import static com.badlogic.gdx.math.Interpolation.*;
 import static com.badlogic.gdx.scenes.scene2d.actions.Actions.*;
+import static com.esotericsoftware.spine.superspineboy.Model.*;
+import static com.esotericsoftware.spine.superspineboy.View.*;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Graphics.DisplayMode;
@@ -46,12 +43,14 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Pixmap.Format;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteCache;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
 import com.badlogic.gdx.math.Rectangle;
+import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
@@ -73,6 +72,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.UIUtils;
 import com.badlogic.gdx.utils.FloatArray;
 import com.badlogic.gdx.utils.Scaling;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
+import com.esotericsoftware.spine.SkeletonRendererDebug;
 
 /** The user interface displayed on top of the game (menu, health bar, splash screens). */
 class UI extends InputAdapter {
@@ -93,6 +93,7 @@ class UI extends InputAdapter {
 	ProgressBar healthBar;
 	TextButton fullscreenButton, restartButton, menuButton;
 	Table menu;
+	Vector2 temp = new Vector2();
 
 	int windowWidth, windowHeight;
 	float inputTimer;
@@ -106,6 +107,7 @@ class UI extends InputAdapter {
 
 		skeletonRendererDebug = new SkeletonRendererDebug(shapes);
 		skeletonRendererDebug.setScale(scale);
+		// skeletonRendererDebug.setPremultipliedAlpha(true);
 
 		stage = new Stage(new ScreenViewport());
 		loadSkin();
@@ -362,6 +364,14 @@ class UI extends InputAdapter {
 		stage.act();
 		stage.getViewport().apply(true);
 		stage.draw();
+
+		Batch batch = stage.getBatch();
+		batch.setColor(Color.WHITE);
+		batch.begin();
+		Vector2 cursor = stage.screenToStageCoordinates(temp.set(Gdx.input.getX(), Gdx.input.getY()));
+		TextureRegion crosshair = view.assets.crosshair;
+		batch.draw(crosshair, cursor.x - crosshair.getRegionWidth() / 2, cursor.y - crosshair.getRegionHeight() / 2 + 2);
+		batch.end();
 	}
 
 	void resize (int width, int height) {
