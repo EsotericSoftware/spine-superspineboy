@@ -25,7 +25,7 @@ java -jar superSpineboy.jar
 You may find Super Spineboy difficult at first. The game is relatively short, so the difficulty ramps up quickly. These tips may help you overcome the hordes!
 
 * Don't move through further into the level until you've killed all the enemies you find.
-* Spineboy's weapon shoots very fast, but suffers from reduced accuracy when shot continously. Cease firing momentarily to regain accuracy. 
+* Spineboy's weapon shoots very fast, but suffers from reduced accuracy when shot continuously. Cease firing momentarily to regain accuracy. 
 * You cannot shoot backward when running away, but you can jump while running away and shoot backward in the air.
 * Standing your ground and mowing down enemies is great, but there are quickly so many enemies that you get overrun. When this happens, goomba head stomp the enemies. This is key to winning!
 * Getting sandwiched between two groups of enemies is a sure way to die. Head stomp your way to one side so you aren't surrounded.
