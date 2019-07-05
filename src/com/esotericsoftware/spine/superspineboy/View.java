@@ -224,7 +224,7 @@ class View extends InputAdapter {
 			skeletonRenderer.draw(batch, enemy.view.skeleton);
 		}
 		// Draw player.
-		if (player.collisionTimer < 0 || (int)(player.collisionTimer / flashTime) % 3 != 0)
+		if (player.collisionTimer < 0 || (int)(player.collisionTimer / flashTime * 1.5f) % 2 != 0)
 			skeletonRenderer.draw(batch, player.view.skeleton);
 		batch.end();
 

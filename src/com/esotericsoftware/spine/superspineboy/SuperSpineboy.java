@@ -30,13 +30,14 @@
 
 package com.esotericsoftware.spine.superspineboy;
 
-import com.esotericsoftware.spine.superspineboy.Assets.SoundEffect;
-
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
 import com.badlogic.gdx.math.Vector2;
+
+import com.esotericsoftware.spine.AnimationState.TrackEntry;
+import com.esotericsoftware.spine.superspineboy.Assets.SoundEffect;
 
 /** The controller class for the game. It knows about both the model and view and provides a way for the view to know about events
  * that occur in the model. */
@@ -71,13 +72,18 @@ class SuperSpineboy extends ApplicationAdapter {
 
 	void eventHitPlayer (Enemy enemy) {
 		SoundEffect.hurtPlayer.play();
-		if (view.player.hp > 0 && view.player.view.hitAnimation != null)
-			view.player.view.animationState.setAnimation(1, view.player.view.hitAnimation, false);
+		if (view.player.hp > 0 && view.player.view.hitAnimation != null) {
+			TrackEntry entry = view.player.view.animationState.setAnimation(1, view.player.view.hitAnimation, false);
+			entry.setTrackEnd(view.player.view.hitAnimation.getDuration());
+		}
 	}
 
 	void eventHitEnemy (Enemy enemy) {
 		SoundEffect.hurtAlien.play();
-		if (enemy.view.hitAnimation != null) enemy.view.animationState.setAnimation(1, enemy.view.hitAnimation, false);
+		if (enemy.view.hitAnimation != null) {
+			TrackEntry entry = enemy.view.animationState.setAnimation(1, enemy.view.hitAnimation, false);
+			entry.setTrackEnd(enemy.view.hitAnimation.getDuration());
+		}
 	}
 
 	void eventHitBullet (float x, float y, float vx, float vy) {

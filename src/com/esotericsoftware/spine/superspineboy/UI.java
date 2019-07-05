@@ -380,12 +380,11 @@ class UI extends InputAdapter {
 
 	void toggleFullscreen () {
 		if (Gdx.graphics.isFullscreen())
-			Gdx.graphics.setDisplayMode(windowWidth, windowHeight, false);
+			Gdx.graphics.setWindowedMode(windowWidth, windowHeight);
 		else {
 			windowWidth = Gdx.graphics.getWidth();
 			windowHeight = Gdx.graphics.getHeight();
-			DisplayMode desktopDisplayMode = Gdx.graphics.getDesktopDisplayMode();
-			Gdx.graphics.setDisplayMode(desktopDisplayMode.width, desktopDisplayMode.height, true);
+			Gdx.graphics.setFullscreenMode(Gdx.graphics.getDisplayMode());
 		}
 	}
 
@@ -439,7 +438,7 @@ class UI extends InputAdapter {
 			return true;
 		case Keys.ESCAPE:
 			if (Gdx.graphics.isFullscreen())
-				Gdx.graphics.setDisplayMode(windowWidth, windowHeight, false);
+				Gdx.graphics.setWindowedMode(windowWidth, windowHeight);
 			else
 				System.exit(0);
 			return true;

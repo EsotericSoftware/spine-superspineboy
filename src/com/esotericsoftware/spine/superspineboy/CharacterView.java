@@ -56,8 +56,8 @@ class CharacterView {
 		if (force || oldAnimation != animation) {
 			if (state.animation == null) return true;
 			TrackEntry entry = animationState.setAnimation(0, state.animation, state.loop);
-			if (oldAnimation != null) entry.setTime(state.startTimes.get(oldAnimation, state.defaultStartTime));
-			if (!state.loop) entry.setEndTime(9999);
+			if (oldAnimation != null) entry.setTrackTime(state.startTimes.get(oldAnimation, state.defaultStartTime));
+			if (!state.loop) entry.setTrackEnd(Float.MAX_VALUE);
 			return true;
 		}
 		return false;

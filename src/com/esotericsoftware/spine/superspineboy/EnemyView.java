@@ -97,7 +97,7 @@ class EnemyView extends CharacterView {
 		root.setScaleX(root.getScaleX() * enemy.size);
 		root.setScaleY(root.getScaleY() * enemy.size);
 
-		skeleton.setFlipX(enemy.dir == -1);
+		skeleton.setScaleX(enemy.dir);
 		skeleton.updateWorldTransform();
 	}
 }

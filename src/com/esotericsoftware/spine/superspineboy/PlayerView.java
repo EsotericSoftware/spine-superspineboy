@@ -37,6 +37,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
+
 import com.esotericsoftware.spine.Animation;
 import com.esotericsoftware.spine.AnimationState;
 import com.esotericsoftware.spine.AnimationState.AnimationStateAdapter;
@@ -61,13 +62,14 @@ class PlayerView extends CharacterView {
 		player = view.player;
 
 		skeleton = new Skeleton(view.assets.playerSkeletonData);
+
+		// We'll allow any of the bones or animations to be null in case someone has swapped out spineboy for a different skeleton.
 		rearUpperArmBone = skeleton.findBone("rear_upper_arm");
 		rearBracerBone = skeleton.findBone("rear_bracer");
 		gunBone = skeleton.findBone("gun");
 		headBone = skeleton.findBone("head");
 		torsoBone = skeleton.findBone("torso");
 		frontUpperArmBone = skeleton.findBone("front_upper_arm");
-
 		shootAnimation = view.assets.playerSkeletonData.findAnimation("shoot");
 		hitAnimation = view.assets.playerSkeletonData.findAnimation("hit");
 
@@ -124,12 +126,11 @@ class PlayerView extends CharacterView {
 				gunBone.setRotation(0);
 			} else
 				shootRotation += 25; // Use different rotation when shoot animation was applied.
-			skeleton.setFlipX(false);
+			skeleton.setScaleX(1);
 			skeleton.updateWorldTransform();
 
 			// Compute the arm's angle to the mouse, flipping it based on the direction the player faces.
-			Vector2 bonePosition = temp2.set(rearUpperArmBone.getWorldX() + skeleton.getX(),
-				rearUpperArmBone.getWorldY() + skeleton.getY());
+			Vector2 bonePosition = temp2.set(rearUpperArmBone.getWorldX(), rearUpperArmBone.getWorldY());
 			float angle = bonePosition.sub(mouse).angle();
 			float behind = (angle < 90 || angle > 270) ? -1 : 1;
 			if (behind == -1) angle = -angle;
@@ -164,12 +165,12 @@ class PlayerView extends CharacterView {
 				if (headBone != null) headBone.setRotation(headBone.getRotation() + headAngle);
 				if (torsoBone != null) torsoBone.setRotation(torsoBone.getRotation() + torsoAngle);
 				if (frontUpperArmBone != null) frontUpperArmBone.setRotation(frontUpperArmBone.getRotation() - headAngle * 1.4f);
-				rearUpperArmBone.setRotation(gunArmAngle - torsoAngle - rearUpperArmBone.getWorldRotation());
+				rearUpperArmBone.setRotation(gunArmAngle - torsoAngle - rearUpperArmBone.getWorldRotationX());
 				canShoot = true;
 			}
 		}
 
-		skeleton.setFlipX(player.dir == -1);
+		skeleton.setScaleX(player.dir);
 		skeleton.updateWorldTransform();
 	}
 
@@ -185,7 +186,7 @@ class PlayerView extends CharacterView {
 		burstTimer = burstDuration;
 
 		// Compute the position and velocity to spawn a new bullet.
-		float x = skeleton.getX(), y = skeleton.getY();
+		float x = 0, y = 0;
 		if (rearUpperArmBone != null && rearBracerBone != null && gunBone != null) {
 			x += rearUpperArmBone.getWorldX();
 			y += rearUpperArmBone.getWorldY();
@@ -204,8 +205,8 @@ class PlayerView extends CharacterView {
 		float vx = cos * bulletSpeed + player.velocity.x * bulletInheritVelocity;
 		float vy = sin * bulletSpeed + player.velocity.y * bulletInheritVelocity;
 		if (rearUpperArmBone != null && rearBracerBone != null && gunBone != null) {
-			x = skeleton.getX() + gunBone.getWorldX();
-			y = skeleton.getY() + gunBone.getWorldY() + shootOffsetY * scale;
+			x = gunBone.getWorldX();
+			y = gunBone.getWorldY() + shootOffsetY * scale;
 			x += cos * shootOffsetX * scale;
 			y += sin * shootOffsetX * scale;
 		}
