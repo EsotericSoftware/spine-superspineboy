@@ -37,6 +37,7 @@ import com.esotericsoftware.spine.Bone;
 import com.esotericsoftware.spine.Event;
 import com.esotericsoftware.spine.EventData;
 import com.esotericsoftware.spine.Skeleton;
+import com.esotericsoftware.spine.Skeleton.Physics;
 import com.esotericsoftware.spine.Slot;
 import com.esotericsoftware.spine.attachments.Attachment;
 import com.esotericsoftware.spine.superspineboy.Assets.SoundEffect;
@@ -98,6 +99,6 @@ class EnemyView extends CharacterView {
 		root.setScaleY(root.getScaleY() * enemy.size);
 
 		skeleton.setScaleX(enemy.dir);
-		skeleton.updateWorldTransform();
+		skeleton.updateWorldTransform(Physics.none);
 	}
 }

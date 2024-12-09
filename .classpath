@@ -3,10 +3,21 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="assets"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="libs/spine-runtimes-3.7.94.jar"/>
-	<classpathentry kind="lib" path="libs/gdx-1.9.10.jar"/>
-	<classpathentry kind="lib" path="libs/gdx-backend-lwjgl-1.9.10.jar"/>
-	<classpathentry kind="lib" path="libs/gdx-backend-lwjgl-natives-1.9.10.jar"/>
-	<classpathentry kind="lib" path="libs/gdx-natives-1.9.10.jar"/>
+	<classpathentry kind="lib" path="libs/gdx-1.13.0.jar" sourcepath="C:/Users/Luke/repos/spine-runtimes/spine-libgdx/spine-libgdx/src"/>
+	<classpathentry kind="lib" path="libs/gdx-backend-lwjgl-1.13.0.jar"/>
+	<classpathentry kind="lib" path="libs/gdx-platform-1.13.0-natives-desktop.jar"/>
+	<classpathentry kind="lib" path="libs/spine-libgdx-4.2.7.jar" sourcepath="C:/Users/Luke/repos/spine-runtimes/spine-libgdx/spine-libgdx"/>
+	<classpathentry kind="lib" path="libs/gdx-jnigen-loader-2.5.2.jar"/>
+	<classpathentry kind="lib" path="libs/jinput-2.0.5.jar"/>
+	<classpathentry kind="lib" path="libs/jinput-platform-2.0.5-natives-linux.jar"/>
+	<classpathentry kind="lib" path="libs/jinput-platform-2.0.5-natives-osx.jar"/>
+	<classpathentry kind="lib" path="libs/jinput-platform-2.0.5-natives-windows.jar"/>
+	<classpathentry kind="lib" path="libs/jlayer-1.0.1-gdx.jar"/>
+	<classpathentry kind="lib" path="libs/jorbis-0.0.17.jar"/>
+	<classpathentry kind="lib" path="libs/jutils-1.0.0.jar"/>
+	<classpathentry kind="lib" path="libs/lwjgl-2.9.3.jar"/>
+	<classpathentry kind="lib" path="libs/lwjgl-platform-2.9.3-natives-linux.jar"/>
+	<classpathentry kind="lib" path="libs/lwjgl-platform-2.9.3-natives-osx.jar"/>
+	<classpathentry kind="lib" path="libs/lwjgl-platform-2.9.3-natives-windows.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

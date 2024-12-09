@@ -88,11 +88,11 @@ class Assets {
 	}
 
 	void loadPlayerAssets () {
-		playerAtlas = new TextureAtlas(Gdx.files.internal("spineboy/spineboy.atlas"));
+		playerAtlas = new TextureAtlas(Gdx.files.internal("spineboy/spineboy-pro.atlas"));
 
 		SkeletonJson json = new SkeletonJson(playerAtlas);
 		json.setScale(Player.height / Player.heightSource);
-		playerSkeletonData = json.readSkeletonData(Gdx.files.internal("spineboy/spineboy.json"));
+		playerSkeletonData = json.readSkeletonData(Gdx.files.internal("spineboy/spineboy-pro.json"));
 
 		playerAnimationData = new AnimationStateData(playerSkeletonData);
 		playerAnimationData.setDefaultMix(0.2f);
@@ -111,11 +111,11 @@ class Assets {
 	}
 
 	void loadEnemyAssets () {
-		enemyAtlas = new TextureAtlas(Gdx.files.internal("alien/alien.atlas"));
+		enemyAtlas = new TextureAtlas(Gdx.files.internal("alien/alien-pro.atlas"));
 
 		SkeletonJson json = new SkeletonJson(enemyAtlas);
 		json.setScale(Enemy.height / Enemy.heightSource);
-		enemySkeletonData = json.readSkeletonData(Gdx.files.internal("alien/alien.json"));
+		enemySkeletonData = json.readSkeletonData(Gdx.files.internal("alien/alien-pro.json"));
 
 		enemyAnimationData = new AnimationStateData(enemySkeletonData);
 		enemyAnimationData.setDefaultMix(0.1f);

@@ -45,6 +45,7 @@ import com.esotericsoftware.spine.Bone;
 import com.esotericsoftware.spine.Event;
 import com.esotericsoftware.spine.EventData;
 import com.esotericsoftware.spine.Skeleton;
+import com.esotericsoftware.spine.Skeleton.Physics;
 import com.esotericsoftware.spine.superspineboy.Assets.SoundEffect;
 import com.esotericsoftware.spine.superspineboy.Model.State;
 
@@ -127,8 +128,8 @@ class PlayerView extends CharacterView {
 			} else
 				shootRotation += 25; // Use different rotation when shoot animation was applied.
 			skeleton.setScaleX(1);
-			skeleton.updateWorldTransform();
-
+			skeleton.updateWorldTransform(Physics.none);
+			
 			// Compute the arm's angle to the mouse, flipping it based on the direction the player faces.
 			Vector2 bonePosition = temp2.set(rearUpperArmBone.getWorldX(), rearUpperArmBone.getWorldY());
 			float angle = bonePosition.sub(mouse).angle();
@@ -171,7 +172,7 @@ class PlayerView extends CharacterView {
 		}
 
 		skeleton.setScaleX(player.dir);
-		skeleton.updateWorldTransform();
+		skeleton.updateWorldTransform(null);
 	}
 
 	void jump () {

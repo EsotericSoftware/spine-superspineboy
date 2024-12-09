@@ -36,6 +36,7 @@ import static com.esotericsoftware.spine.superspineboy.Player.*;
 import com.esotericsoftware.spine.Animation;
 import com.esotericsoftware.spine.SkeletonRenderer;
 import com.esotericsoftware.spine.superspineboy.Model.State;
+import com.esotericsoftware.spine.utils.TwoColorPolygonBatch;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.InputAdapter;
@@ -71,7 +72,7 @@ class View extends InputAdapter {
 	Player player;
 	OrthographicCamera camera;
 	ExtendViewport viewport;
-	SpriteBatch batch;
+	TwoColorPolygonBatch batch;
 	SkeletonRenderer skeletonRenderer;
 	OrthoCachedTiledMapRenderer mapRenderer;
 	Assets assets;
@@ -88,7 +89,7 @@ class View extends InputAdapter {
 		mapRenderer.setOverCache(0.6f);
 		mapRenderer.setMaxTileSize(512, 512);
 
-		batch = new SpriteBatch();
+		batch = new TwoColorPolygonBatch();
 		camera = new OrthographicCamera();
 		viewport = new ExtendViewport(cameraMinWidth, cameraHeight, cameraMaxWidth, cameraHeight, camera);
 
