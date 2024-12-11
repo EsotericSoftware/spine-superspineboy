@@ -1,2 +1,2 @@
-@echo off
+#!/bin/bash
 mvn eclipse:eclipse

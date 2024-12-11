@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="src" path="assets"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="libs/gdx-1.13.0.jar" sourcepath="C:/Users/Luke/repos/spine-runtimes/spine-libgdx/spine-libgdx/src"/>
-	<classpathentry kind="lib" path="libs/gdx-backend-lwjgl-1.13.0.jar"/>
-	<classpathentry kind="lib" path="libs/gdx-platform-1.13.0-natives-desktop.jar"/>
-	<classpathentry kind="lib" path="libs/spine-libgdx-4.2.7.jar" sourcepath="C:/Users/Luke/repos/spine-runtimes/spine-libgdx/spine-libgdx"/>
-	<classpathentry kind="lib" path="libs/gdx-jnigen-loader-2.5.2.jar"/>
-	<classpathentry kind="lib" path="libs/jinput-2.0.5.jar"/>
-	<classpathentry kind="lib" path="libs/jinput-platform-2.0.5-natives-linux.jar"/>
-	<classpathentry kind="lib" path="libs/jinput-platform-2.0.5-natives-osx.jar"/>
-	<classpathentry kind="lib" path="libs/jinput-platform-2.0.5-natives-windows.jar"/>
-	<classpathentry kind="lib" path="libs/jlayer-1.0.1-gdx.jar"/>
-	<classpathentry kind="lib" path="libs/jorbis-0.0.17.jar"/>
-	<classpathentry kind="lib" path="libs/jutils-1.0.0.jar"/>
-	<classpathentry kind="lib" path="libs/lwjgl-2.9.3.jar"/>
-	<classpathentry kind="lib" path="libs/lwjgl-platform-2.9.3-natives-linux.jar"/>
-	<classpathentry kind="lib" path="libs/lwjgl-platform-2.9.3-natives-osx.jar"/>
-	<classpathentry kind="lib" path="libs/lwjgl-platform-2.9.3-natives-windows.jar"/>
-	<classpathentry kind="output" path="bin"/>
+  <classpathentry kind="src" path="src" including="**/*.java"/>
+  <classpathentry kind="src" path="assets" excluding="**/*.java"/>
+  <classpathentry kind="output" path="bin"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+  <classpathentry kind="var" path="M2_REPO/com/esotericsoftware/spine/spine-libgdx/4.2.7/spine-libgdx-4.2.7.jar" sourcepath="M2_REPO/com/esotericsoftware/spine/spine-libgdx/4.2.7/spine-libgdx-4.2.7-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/badlogicgames/gdx/gdx/1.13.0/gdx-1.13.0.jar" sourcepath="M2_REPO/com/badlogicgames/gdx/gdx/1.13.0/gdx-1.13.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/badlogicgames/gdx/gdx-jnigen-loader/2.5.2/gdx-jnigen-loader-2.5.2.jar" sourcepath="M2_REPO/com/badlogicgames/gdx/gdx-jnigen-loader/2.5.2/gdx-jnigen-loader-2.5.2-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/badlogicgames/gdx/gdx-backend-lwjgl/1.13.0/gdx-backend-lwjgl-1.13.0.jar" sourcepath="M2_REPO/com/badlogicgames/gdx/gdx-backend-lwjgl/1.13.0/gdx-backend-lwjgl-1.13.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/lwjgl/lwjgl/lwjgl/2.9.3/lwjgl-2.9.3.jar" sourcepath="M2_REPO/org/lwjgl/lwjgl/lwjgl/2.9.3/lwjgl-2.9.3-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/lwjgl/lwjgl/lwjgl-platform/2.9.3/lwjgl-platform-2.9.3-natives-windows.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/lwjgl/lwjgl/lwjgl-platform/2.9.3/lwjgl-platform-2.9.3-natives-linux.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/lwjgl/lwjgl/lwjgl-platform/2.9.3/lwjgl-platform-2.9.3-natives-osx.jar"/>
+  <classpathentry kind="var" path="M2_REPO/net/java/jinput/jinput/2.0.5/jinput-2.0.5.jar" sourcepath="M2_REPO/net/java/jinput/jinput/2.0.5/jinput-2.0.5-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/net/java/jutils/jutils/1.0.0/jutils-1.0.0.jar" sourcepath="M2_REPO/net/java/jutils/jutils/1.0.0/jutils-1.0.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/net/java/jinput/jinput-platform/2.0.5/jinput-platform-2.0.5-natives-linux.jar"/>
+  <classpathentry kind="var" path="M2_REPO/net/java/jinput/jinput-platform/2.0.5/jinput-platform-2.0.5-natives-windows.jar"/>
+  <classpathentry kind="var" path="M2_REPO/net/java/jinput/jinput-platform/2.0.5/jinput-platform-2.0.5-natives-osx.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/badlogicgames/jlayer/jlayer/1.0.1-gdx/jlayer-1.0.1-gdx.jar" sourcepath="M2_REPO/com/badlogicgames/jlayer/jlayer/1.0.1-gdx/jlayer-1.0.1-gdx-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jcraft/jorbis/0.0.17/jorbis-0.0.17.jar" sourcepath="M2_REPO/org/jcraft/jorbis/0.0.17/jorbis-0.0.17-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/badlogicgames/gdx/gdx-platform/1.13.0/gdx-platform-1.13.0-natives-desktop.jar"/>
 </classpath>

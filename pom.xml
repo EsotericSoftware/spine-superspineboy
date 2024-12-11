@@ -43,6 +43,7 @@
 
 <build>
 	<sourceDirectory>src</sourceDirectory>
+	<outputDirectory>bin</outputDirectory>
 	<resources>
 		<resource>
 			<directory>assets</directory>
