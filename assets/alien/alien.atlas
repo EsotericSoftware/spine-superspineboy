@@ -1,145 +1,65 @@
-
 alien.png
-format: RGBA8888
-filter: Linear,Linear
-repeat: none
+size:1361,1032
+filter:Linear,Linear
+pma:true
 back_foot
-  rotate: false
-  xy: 754, 13
-  size: 10, 7
-  orig: 10, 7
-  offset: 0, 0
-  index: -1
+bounds:326,5,16,11
+rotate:90
 back_shin
-  rotate: false
-  xy: 395, 65
-  size: 25, 29
-  orig: 25, 29
-  offset: 0, 0
-  index: -1
+bounds:974,294,42,48
 back_thigh
-  rotate: false
-  xy: 965, 95
-  size: 28, 28
-  orig: 28, 28
-  offset: 0, 0
-  index: -1
+bounds:1301,167,45,47
+offsets:2,0,47,47
+rotate:90
 backarmor
-  rotate: false
-  xy: 919, 257
-  size: 97, 109
-  orig: 97, 109
-  offset: 0, 0
-  index: -1
+bounds:1018,124,162,181
+offsets:0,1,162,182
 blown_up_nck
-  rotate: false
-  xy: 919, 193
-  size: 92, 62
-  orig: 92, 62
-  offset: 0, 0
-  index: -1
+bounds:974,19,153,103
+offsets:0,0,153,104
 body
-  rotate: false
-  xy: 880, 368
-  size: 118, 141
-  orig: 118, 141
-  offset: 0, 0
-  index: -1
+bounds:515,318,196,235
+rotate:90
 burst01
-  rotate: false
-  xy: 221, 15
-  size: 172, 185
-  orig: 172, 185
-  offset: 0, 0
-  index: -1
+bounds:2,9,285,308
+offsets:1,1,286,309
+rotate:90
 burst02
-  rotate: true
-  xy: 2, 15
-  size: 185, 217
-  orig: 187, 217
-  offset: 2, 0
-  index: -1
+bounds:611,9,307,361
+offsets:4,0,311,361
+rotate:90
 front_foot
-  rotate: false
-  xy: 2, 6
-  size: 11, 7
-  orig: 11, 7
-  offset: 0, 0
-  index: -1
+bounds:312,2,19,12
+rotate:90
 front_lower_arm
-  rotate: true
-  xy: 919, 125
-  size: 66, 75
-  orig: 66, 75
-  offset: 0, 0
-  index: -1
+bounds:1129,12,110,125
+rotate:90
 front_shin
-  rotate: false
-  xy: 395, 96
-  size: 29, 34
-  orig: 29, 34
-  offset: 0, 0
-  index: -1
+bounds:1256,75,49,56
+rotate:90
 front_thigh
-  rotate: false
-  xy: 902, 34
-  size: 31, 32
-  orig: 32, 32
-  offset: 1, 0
-  index: -1
+bounds:1182,138,52,54
+offsets:2,0,54,54
+rotate:90
 front_upper_arm
-  rotate: true
-  xy: 395, 132
-  size: 68, 33
-  orig: 68, 33
-  offset: 0, 0
-  index: -1
+bounds:1182,192,113,55
+rotate:90
 head
-  rotate: true
-  xy: 754, 126
-  size: 178, 163
-  orig: 178, 163
-  offset: 0, 0
-  index: -1
+bounds:312,23,297,271
+offsets:0,1,297,272
 lower_back_arm
-  rotate: false
-  xy: 902, 68
-  size: 61, 55
-  orig: 61, 55
-  offset: 0, 0
-  index: -1
+bounds:1256,214,101,91
 metaljaw
-  rotate: false
-  xy: 754, 22
-  size: 146, 102
-  orig: 146, 103
-  offset: 0, 1
-  index: -1
+bounds:752,344,242,170
+offsets:1,2,243,172
 splat01
-  rotate: false
-  xy: 444, 2
-  size: 308, 302
-  orig: 308, 302
-  offset: 0, 0
-  index: -1
+bounds:515,516,514,503
+rotate:90
 splat02
-  rotate: false
-  xy: 2, 202
-  size: 440, 307
-  orig: 440, 307
-  offset: 0, 0
-  index: -1
+bounds:2,296,734,511
+rotate:90
 splat03
-  rotate: false
-  xy: 444, 306
-  size: 434, 203
-  orig: 434, 203
-  offset: 0, 0
-  index: -1
+bounds:1020,307,723,339
+rotate:90
 upper_back_arm
-  rotate: false
-  xy: 880, 314
-  size: 36, 52
-  orig: 36, 52
-  offset: 0, 0
-  index: -1
+bounds:1239,126,60,86

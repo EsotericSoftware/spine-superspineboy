@@ -1,31 +1,28 @@
 /******************************************************************************
- * Spine Runtimes Software License
- * Version 2.1
- * 
- * Copyright (c) 2013, Esoteric Software
- * All rights reserved.
- * 
- * You are granted a perpetual, non-exclusive, non-sublicensable and
- * non-transferable license to install, execute and perform the Spine Runtimes
- * Software (the "Software") solely for internal use. Without the written
- * permission of Esoteric Software (typically granted by licensing Spine), you
- * may not (a) modify, translate, adapt or otherwise create derivative works,
- * improvements of the Software or develop new applications using the Software
- * or (b) remove, delete, alter or obscure any trademarks or any copyright,
- * trademark, patent or other intellectual property or proprietary rights notices
- * on or in the Software, including any copy thereof. Redistributions in binary
- * or source form must include this license and terms.
- * 
- * THIS SOFTWARE IS PROVIDED BY ESOTERIC SOFTWARE "AS IS" AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
- * EVENT SHALL ESOTERIC SOFTARE BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
- * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
- * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
- * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
- * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
- * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
- * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+* Spine Runtimes License Agreement
+* Last updated February 20, 2024. Replaces all prior versions.
+*
+* Copyright (c) 2013-2024, Esoteric Software LLC
+*
+* Integration of the Spine Runtimes into software or otherwise creating derivative works 
+* of the Spine Runtimes is permitted under the terms and conditions of Section 2 of the 
+* Spine Editor License Agreement:
+* https://esotericsoftware.com/spine-editor-license
+*
+* Otherwise, it is permitted to integrate the Spine Runtimes into software or otherwise
+* create derivative works of the Spine Runtimes (collectively, "Products"), provided that 
+* each user of the Products must obtain their own Spine Editor license and redistribution 
+* of the Products in any form must include this license and copyright notice.
+*
+* THE SPINE RUNTIMES ARE PROVIDED BY ESOTERIC SOFTWARE LLC "AS IS" AND ANY EXPRESS OR IMPLIED 
+* WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS 
+* FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL ESOTERIC SOFTWARE LLC BE LIABLE FOR 
+* ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES 
+* (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES, 
+* BUSINESS INTERRUPTION, OR LOSS OF USE, DATA, OR PROFITS) HOWEVER CAUSED AND ON ANY 
+* THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT 
+* (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THE SPINE RUNTIMES, 
+* EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
 package com.esotericsoftware.spine.superspineboy;
@@ -45,6 +42,7 @@ import com.esotericsoftware.spine.Bone;
 import com.esotericsoftware.spine.Event;
 import com.esotericsoftware.spine.EventData;
 import com.esotericsoftware.spine.Skeleton;
+import com.esotericsoftware.spine.Skeleton.Physics;
 import com.esotericsoftware.spine.superspineboy.Assets.SoundEffect;
 import com.esotericsoftware.spine.superspineboy.Model.State;
 
@@ -127,8 +125,8 @@ class PlayerView extends CharacterView {
 			} else
 				shootRotation += 25; // Use different rotation when shoot animation was applied.
 			skeleton.setScaleX(1);
-			skeleton.updateWorldTransform();
-
+			skeleton.updateWorldTransform(Physics.none);
+			
 			// Compute the arm's angle to the mouse, flipping it based on the direction the player faces.
 			Vector2 bonePosition = temp2.set(rearUpperArmBone.getWorldX(), rearUpperArmBone.getWorldY());
 			float angle = bonePosition.sub(mouse).angle();
@@ -171,7 +169,7 @@ class PlayerView extends CharacterView {
 		}
 
 		skeleton.setScaleX(player.dir);
-		skeleton.updateWorldTransform();
+		skeleton.updateWorldTransform(null);
 	}
 
 	void jump () {
